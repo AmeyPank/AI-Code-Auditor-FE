@@ -1,0 +1,16 @@
+# Dependencies and generated build output
+**/node_modules/
+**/dist/
+**/coverage/
+**/*.tsbuildinfo
+
+# Local environment variables and credentials
+**/.env
+**/.env.*
+!**/.env.example
+
+# Logs and local tooling state
+**/*.log
+.DS_Store
+.vscode/
+.idea/
