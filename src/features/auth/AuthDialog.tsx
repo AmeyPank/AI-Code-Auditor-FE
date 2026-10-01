@@ -82,7 +82,7 @@ export function AuthDialog({ googleClientId, onClose, onAuthenticated }: AuthDia
 
         {googleClientId
           ? <GoogleSignInButton clientId={googleClientId} onCredential={signInWithGoogle} />
-          : <p className="google-setup-note">Google sign-in becomes available after `VITE_GOOGLE_CLIENT_ID` is configured.</p>}
+          : <p className="google-setup-note">Google sign-in becomes available after `GOOGLE_CLIENT_ID` is configured.</p>}
         <div className="auth-divider"><span>or use email</span></div>
 
         <form className="auth-form" onSubmit={submit}>

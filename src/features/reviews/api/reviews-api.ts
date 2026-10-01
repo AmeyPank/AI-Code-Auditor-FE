@@ -1,6 +1,6 @@
 import type { CreateReviewInput, CurrentAccess, HealthStatus, Review, ReviewListItem } from '../../../types/review';
 
-const API_BASE_URL = import.meta.env.VITE_API_BASE_URL || '/api/v1';
+const API_BASE_URL = import.meta.env.API_BASE_URL || '/api/v1';
 const GUEST_ID_STORAGE_KEY = 'ai-code-auditor.guest-id';
 
 /** Keeps a stable anonymous identity in this browser until the user signs in. */

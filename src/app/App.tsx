@@ -228,7 +228,7 @@ export default function App() {
         <footer className="page-footer"><span>AI Code Auditor <span className="footer-dot">·</span> Review smarter, ship safer.</span><span>Built for thoughtful code reviews</span></footer>
       </main>
     </div>
-    {isAuthOpen && <AuthDialog googleClientId={import.meta.env.VITE_GOOGLE_CLIENT_ID?.startsWith('replace_') ? undefined : import.meta.env.VITE_GOOGLE_CLIENT_ID} onClose={() => setIsAuthOpen(false)} onAuthenticated={handleAuthenticated} />}
+    {isAuthOpen && <AuthDialog googleClientId={import.meta.env.GOOGLE_CLIENT_ID?.startsWith('replace_') ? undefined : import.meta.env.GOOGLE_CLIENT_ID} onClose={() => setIsAuthOpen(false)} onAuthenticated={handleAuthenticated} />}
     </>
   );
 }
