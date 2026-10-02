@@ -198,3 +198,4 @@ npm run build
 ```
 
 This generates a static build in the `dist/` directory, ready to be deployed to any static hosting provider (e.g., Firebase Hosting, Vercel, Netlify, Nginx, or AWS S3/CloudFront). For production hosting, ensure the reverse proxy or API gateway maps `/api` requests to the production backend URL.
+
