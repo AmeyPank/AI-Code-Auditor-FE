@@ -32,3 +32,5 @@ npm run preview
 - `src/features/reviews/components` — review form, history, detail, and severity display.
 - `src/types` — API request and response types.
 - `src/styles` — global styles and responsive layout.
+
+## Pull request trial
