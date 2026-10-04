@@ -51,13 +51,13 @@ The AI Code Auditor frontend provides an intuitive, developer-focused interface 
 
 ## Tech Stack
 
-| Category | Technology |
-| --- | --- |
-| **Framework** | [React 19](https://react.dev/) |
-| **Language** | [TypeScript 5](https://www.typescriptlang.org/) |
-| **Build Tool & Dev Server** | [Vite 7](https://vitejs.dev/) |
-| **Styling** | Modern CSS3 (CSS custom properties, flex/grid layouts, dark theme) |
-| **Auth** | Cookie-based sessions & Google Identity Services SDK |
+| Category                    | Technology                                                         |
+| --------------------------- | ------------------------------------------------------------------ |
+| **Framework**               | [React 19](https://react.dev/)                                     |
+| **Language**                | [TypeScript 5](https://www.typescriptlang.org/)                    |
+| **Build Tool & Dev Server** | [Vite 7](https://vitejs.dev/)                                      |
+| **Styling**                 | Modern CSS3 (CSS custom properties, flex/grid layouts, dark theme) |
+| **Auth**                    | Cookie-based sessions & Google Identity Services SDK               |
 
 ---
 
@@ -113,11 +113,11 @@ Copy `.env.example` to create your local `.env` file:
 cp .env.example .env
 ```
 
-| Variable | Default Value | Description |
-| --- | --- | --- |
-| `API_BASE_URL` | `/api/v1` | Base route path for backend API endpoints. |
-| `API_PROXY_TARGET` | `http://localhost:3000` | Target URL where Vite proxies `/api` calls during development. |
-| `VITE_GOOGLE_CLIENT_ID` | `""` | *(Optional)* Google OAuth 2.0 Web Client ID for Google Sign-In. |
+| Variable                | Default Value           | Description                                                     |
+| ----------------------- | ----------------------- | --------------------------------------------------------------- |
+| `API_BASE_URL`          | `/api/v1`               | Base route path for backend API endpoints.                      |
+| `API_PROXY_TARGET`      | `http://localhost:3000` | Target URL where Vite proxies `/api` calls during development.  |
+| `VITE_GOOGLE_CLIENT_ID` | `""`                    | _(Optional)_ Google OAuth 2.0 Web Client ID for Google Sign-In. |
 
 > **Note on Google Sign-In**: To enable Google OAuth, register your OAuth Web Client ID in the Google Cloud Console and add `http://localhost:5173` to **Authorized JavaScript origins**.
 
@@ -146,11 +146,11 @@ cp .env.example .env
 
 ## Available Scripts
 
-| Command | Description |
-| --- | --- |
-| `npm run dev` | Starts Vite local development server with hot-module reloading (HMR) at port `5173`. |
-| `npm run build` | Runs TypeScript type-checks (`tsc --noEmit`) and compiles optimized production assets into `dist/`. |
-| `npm run preview` | Serves the production build locally to test bundle behavior prior to deployment. |
+| Command           | Description                                                                                         |
+| ----------------- | --------------------------------------------------------------------------------------------------- |
+| `npm run dev`     | Starts Vite local development server with hot-module reloading (HMR) at port `5173`.                |
+| `npm run build`   | Runs TypeScript type-checks (`tsc --noEmit`) and compiles optimized production assets into `dist/`. |
+| `npm run preview` | Serves the production build locally to test bundle behavior prior to deployment.                    |
 
 ---
 
@@ -173,17 +173,17 @@ The application implements a progression-based quota lifecycle:
 
 The frontend connects to the following backend REST routes:
 
-| Method | Endpoint | Description |
-| --- | --- | --- |
-| `GET` | `/api/v1/health` | Checks backend service health and availability. |
-| `GET` | `/api/v1/auth/me` | Fetches current user status and quota consumption. |
-| `POST` | `/api/v1/auth/register` | Registers a new account with email, password, and display name. |
-| `POST` | `/api/v1/auth/login` | Authenticates with email and password credentials. |
-| `POST` | `/api/v1/auth/google` | Validates Google ID token for single sign-on. |
-| `POST` | `/api/v1/auth/logout` | Clears authentication session cookies. |
-| `GET` | `/api/v1/reviews?limit=100` | Retrieves review history for the active user/guest. |
-| `GET` | `/api/v1/reviews/:id` | Fetches full report including diff, summary, and findings. |
-| `POST` | `/api/v1/reviews` | Submits a new PR diff for AI analysis. |
+| Method | Endpoint                    | Description                                                     |
+| ------ | --------------------------- | --------------------------------------------------------------- |
+| `GET`  | `/api/v1/health`            | Checks backend service health and availability.                 |
+| `GET`  | `/api/v1/auth/me`           | Fetches current user status and quota consumption.              |
+| `POST` | `/api/v1/auth/register`     | Registers a new account with email, password, and display name. |
+| `POST` | `/api/v1/auth/login`        | Authenticates with email and password credentials.              |
+| `POST` | `/api/v1/auth/google`       | Validates Google ID token for single sign-on.                   |
+| `POST` | `/api/v1/auth/logout`       | Clears authentication session cookies.                          |
+| `GET`  | `/api/v1/reviews?limit=100` | Retrieves review history for the active user/guest.             |
+| `GET`  | `/api/v1/reviews/:id`       | Fetches full report including diff, summary, and findings.      |
+| `POST` | `/api/v1/reviews`           | Submits a new PR diff for AI analysis.                          |
 
 Interactive API documentation and schema definitions are hosted by the backend Swagger UI at [http://localhost:3000/api/docs](http://localhost:3000/api/docs).
 
@@ -198,4 +198,3 @@ npm run build
 ```
 
 This generates a static build in the `dist/` directory, ready to be deployed to any static hosting provider (e.g., Firebase Hosting, Vercel, Netlify, Nginx, or AWS S3/CloudFront). For production hosting, ensure the reverse proxy or API gateway maps `/api` requests to the production backend URL.
-
